@@ -46,7 +46,7 @@ main > section {
 }
 
 footer {
-  width: 100%;
+  width: 100%; /*full width footer*/
   padding: 25px;
   bottom: 0;
 }
@@ -55,7 +55,7 @@ footer {
 
 html {
   font-family: 'lato', sans-serif;
-  font-size: 10px;
+  font-size: 10px; /*setting the base font size*/
   line-height: 1.6;
 }
 
@@ -124,13 +124,14 @@ input[type=text] {
   border: none;
   color: #FFFFFF;
   padding: 10px 20px;
+  margin: 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 1.6rem;
 }
 
-#button:hover {
+#button:hover { /*button colour change on hover*/
   background-color: #BEFFC7;
   color: #000000;
 }
@@ -192,7 +193,7 @@ main > section:nth-of-type(1) {
 
 #toDoList li {
   position: relative;
-  text-align: right;
+  text-align: right; /*aligning all delete buttons in the list*/
 }
 
 footer {
