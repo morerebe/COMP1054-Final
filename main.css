@@ -1,18 +1,16 @@
-/*
-
-CONTENTS
+/* CONTENTS
 
 1. GENERAL STYLING
 2. TYPOGRAPHY
 3. FORM, INPUT & BUTTONS
 4. LAYOUT & LIST
-5.
+5. RESPONSIVE
 
 Colour scheme based on - https://coolors.co/9aa0a8-a7c4b5-a9d8b8-beffc7-72705b
 
 Header image sourced from - https://www.pexels.com/photo/woman-sitting-on-chair-while-using-laptop-4065621/
 
-/* General Styling */
+  /* 1. General Styling */
 
 * {
   box-sizing: border-box;
@@ -53,7 +51,7 @@ footer {
   bottom: 0;
 }
 
-/* Typography */
+  /* 2. Typography Sizing and Style */
 
 html {
   font-family: 'lato', sans-serif;
@@ -106,7 +104,7 @@ footer p {
   color: #FFFFFF;
 }
 
-/* Form, Inputs & Buttons */
+  /* 3. Styling the Form, Inputs & Buttons */
 
 form {
   width: 100%;
@@ -152,7 +150,7 @@ input[type=text] {
   background-color: #9AA0A8;
   color: #000000;
 }
-  /* Layout & List */
+  /* 4. Styling Layout & List */
 
 section {
   width: 70%;
@@ -168,10 +166,17 @@ main > section:nth-of-type(1) {
 
 .list {
   display: flex;
+  flex-wrap: wrap;
   padding-bottom: 20px;
 }
 
-.list article {
+.list article:nth-child(1) {
+  flex: 50%;  /*first article is 50% of the list class width*/
+  flex-grow: 1;
+}
+
+.list article:nth-child(2) {
+  flex: 50%; /*second article is 50% of the list class width*/
   flex-grow: 1;
 }
 
@@ -194,6 +199,8 @@ footer {
   background-color: #72705B;
 }
 
+  /* 5. Responsive Design */
+
 @media only screen and (min-width: 768px) {
   main {
     width: 70%;
@@ -201,7 +208,8 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
-  .body {
+  .list {
     flex-direction: column;
   }
+
 }
